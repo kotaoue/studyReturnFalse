@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        console.log("start");
+
+
+        $(function () {
+            $('#noReturn').on('click', function () {
+                console.log("click");
+                window.location.href = "https://www.google.com/";
+            });
+            $('#returnFalse').on('click', function () {
+                console.log("click");
+                window.location.href = "https://www.google.com/";
+                return false;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li><a href="javascript:void(0)" id="noReturn">return なし</a></li>
+        <li><a href="javascript:void(0)" id="returnFalse">return false</a></li>
+    </ul>
+</body>
+
+</html>
